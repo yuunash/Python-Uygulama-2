@@ -1,0 +1,26 @@
+import math 
+
+points = []
+distances = []
+def euclideanDistance(x1,x2,y1,y2):
+    q = (x2-x1)
+    r = (y2-y1)
+    points.append([q,r])
+    print("noktalar: ",points)
+    q2 = math.pow(q, 2)
+    r2 = math.pow(r, 2)
+    kokalma = q2 + r2
+    # kokalma = √(x₂-x₁)²+(y₂-y₁)²
+    kokalma2 = math.sqrt(kokalma)
+    distances.append(kokalma2)
+    print("uzaklık: ",distances)
+
+    min_distances = min(distances)
+    print("min distance: ", min_distances)
+
+
+x1 = int(input("x1 noktasını giriniz: "))
+y1 = int(input("y1 noktasını giriniz: "))
+x2 = int(input("x2 noktasını giriniz: "))
+y2 = int(input("y2 noktasını giriniz: "))
+euclideanDistance(x1,x2,y1,y2)
